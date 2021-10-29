@@ -1,0 +1,28 @@
+Shop backoffice to enter products on sale.
+
+index.php - home page
+Product.php - Product class to instantiate products. 
+ 
+Call the class file in index.php file with include/require 
+Test class by instantiating an object with "hard" values. 
+Check the contents of the object with var_dump ($ variable); .
+
+Add a form on the page to enter all the information needed to create a product. 
+The action of the form should be "index.php" and the verb "POST".
+ 
+In the index.php file, if the request was made with the verb POST, 
+retrieve the content of the request (from the form) and use it to create 
+a new product object. Then display the new product information below the form.
+
+Price properties in protected visibility. 
+When changed, the conversion to a floating point number should be automatic before storage.
+
+Product cloning system:
+create a static method taking as a parameter:
+- the product object to be duplicated
+- the name of the clone to be made
+- method creates a new instance of the product class with the following constraints:
+1. The name must be the one retrieved as a parameter
+2. Description should be empty
+3. Other properties taken from the cloned object
+4. The static method should return the new object. 
