@@ -123,7 +123,7 @@
             </div>
             <!-- Ask age -->
             <div class="form-group">
-                <label for="age">How old are you</label>
+                <label for="age">How old are you?</label>
                 <input type="number" class="form-control" name="age" id="age">
             </div>
         </div>

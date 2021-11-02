@@ -21,6 +21,10 @@
     $multiply = $perc + 1;
     $incTax = $excTax * $multiply;
     $fullPrice = number_format($incTax, 2, '.', '');
+
+    // age difference calculation
+    $age = $_POST["age"];
+    
     
     // create new instance of Stock or child classes from every form input
     if ($category !== "Book" && $category !== "Video game") {
@@ -88,7 +92,7 @@
         }
         // automatic conversion to a floating point
         public function __set($property, $value) {
-            if($property === "excTax" || "tax") {
+            if($property === "excTax") {
                 $this->$property = (float) $value;
             }
             else {
@@ -154,8 +158,8 @@
         public $review;
         // check if user is old enough
         public function ageCheck ($age) {
-            $difference = $this->$age - $this->$ageMin;
-            if ($this->$age >= $this->$ageMin) {
+            $difference = $this->ageMin - $age;
+            if ($age >= $this->ageMin) {
                 echo "You are welcome to play this game";
             } else {
                 echo "Sorry, you are not yet old enough. You can play in $difference years!";
