@@ -14,6 +14,7 @@
         // imports
         include __DIR__."/components/menu.php";
         include __DIR__."/components/Product.php";
+        include __DIR__."/components/gameDisplay.php";
         // call menu function
         show_menu($siteName, $links);
     ?>
@@ -161,6 +162,26 @@
             </tr>
         </tbody>
     </table>
+
+    <!-- Display the title, author and description using Book method -->
+    <div>
+        <?php 
+            if ($category === "Book") {
+                $stockItem->bookDisplay();
+            }
+        ?> 
+    </div>
+
+    <!-- Call age check method in Video class -->
+    <div>
+        <?php 
+        $age = $_POST["age"];
+            if ($category === "Video game") {
+                $stockItem->ageCheck($age);
+            }
+        ?> 
+    </div>
+    
 
 </body>
 </html>

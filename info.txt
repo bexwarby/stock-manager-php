@@ -26,3 +26,9 @@ create a static method taking as a parameter:
 2. Description should be empty
 3. Other properties taken from the cloned object
 4. The static method should return the new object. 
+
+
+
+<?php if(isset($_POST["category"]["Video game"])) { ?>
+
+<?php if(isset($_POST["category"]["Book"])) { ?>
