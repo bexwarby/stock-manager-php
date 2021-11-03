@@ -11,16 +11,23 @@
 <body>
 
     <?php
+        
         // imports
-        include __DIR__."/components/menu.php";
+        include_once __DIR__."/components/menu.php";
+        include_once __DIR__."/components/SecondProduct.php";
+
         // call menu function
         show_menu($siteName, $links);
-    ?>
 
+        $text = new testProduct\Stock();
+    ?>
+  
     <!-- Page title -->
     <h3 class="d-block p-2 bg-dark text-white text-center">
         Contact us here!
     </h3>
+
+    <p><?php echo $text->printText(); ?></p>
 
     <!-- Contact Form -->
     

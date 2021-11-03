@@ -1,6 +1,6 @@
 <?php
 
-    include_once __DIR__."/Product.php";
+    include_once __DIR__."/components/Product.php";
     use Store as Game;
 
     function displayGame ($game) {
