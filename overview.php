@@ -12,9 +12,9 @@
 
     <?php
         // imports
-        include __DIR__."/components/menu.php";
-        include __DIR__."/components/Product.php";
-        include __DIR__."/components/gameDisplay.php";
+        include_once __DIR__."/components/menu.php";
+        include_once __DIR__."/components/Product.php";
+        include_once __DIR__."/components/gameDisplay.php";
         // call menu function
         show_menu($siteName, $links);
     ?>
@@ -175,9 +175,18 @@
     <!-- Call age check method in Video class -->
     <div>
         <?php 
-        $age = $_POST["age"];
+            $age = $_POST["age"];
             if ($category === "Video game") {
                 $stockItem->ageCheck($age);
+            }
+        ?> 
+    </div>
+
+    <!-- Call age check method in Video class -->
+    <div>
+        <?php 
+            if ($category === "Video game") {
+                displayGame($newObject);
             }
         ?> 
     </div>
